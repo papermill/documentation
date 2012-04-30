@@ -67,6 +67,7 @@ Instead of a framework, `papermill` rather tries to be an opinionated collection
 ##### Website Output  
 - [`html5boilerplate`](http://html5boilerplate.com) -- *nomen est omen*
 - [`bootstrap`](http://twitter.github.com/bootstrap/) from twitter -- `HTML`, `CSS` and `javascript` components. A great base to start your own layout, but it also looks great right out of the box.
+- [Readabilty: Article Publishing Guidelines](http://www.readability.com/publishers/guidelines/#reader) -- good summary of the [hNews microformat specification](http://microformats.org/wiki/hnews) and [Mark Pilgrim's Dive into HTML5](http://diveintohtml5.ep.io/semantics.html#new-elements).
 
 ##### Print Output
 - [`LaTeX`](#) -- it's huge. 
