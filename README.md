@@ -53,16 +53,16 @@ Instead of a *framework*, `papermill` rather tries to be an opinionated collecti
 ![high-level overview](https://github.com/papermill/papermill/raw/master/documentation/papermill.sketch-arch1%402x.png)
 
 ### Text Input
-- `Git` -- version control <del>voodoo</del> software. Takes care of your files and their history -- it's a neverending palimpset! Plus it provides ways to collaborate with editors and sync with remote servers. It also has hooks which we can use for automation.
+- [`Git`](http://git-scm.com) -- version control <del>voodoo</del> software. Takes care of your files and their history -- it's a neverending palimpset! Plus it provides ways to collaborate with editors and sync with remote servers. It also has hooks which we can use for automation.
 - [`Markdown`](http://daringfireball.net/projects/markdown/) -- plain text formating that goes out of your way, by [John Gruber](http://daringfireball.net). 
-- `pandoc`  -- Markdown is for web writers, but papermill is for everyone. `pandoc` provides extensions we need with a consistent syntax:Citations, Footnotes and Bibliography.
+- [`pandoc`](http://johnmacfarlane.net/pandoc/)  -- Markdown is for web writers, but papermill is for everyone. `pandoc` provides extensions we need with a consistent syntax: Citations, Footnotes and Bibliography.
 - [`mustache`](http://mustache.github.com) -- logic-less templates for (almost) everything. Also its successor [`handlebars`](http://handlebarsjs.com).
 - [`BibTex`](http://www.bibtex.org) -- commonly used with LaTeX, stores your bibliography info in a (plain text) database.
 
 ### Output Generation
 - `make` -- a good old friend from `*NIX` which, according to it's [manpage](http://man.cx/make) "shall update files that are derived from other files", which is precisely what we are doing here.
 
-- `punch` -- your friendly neighbourhood static website generator. Actually, it can be used for any kind of text files (just like `mustache`). This can be used to even generate your Mardown if you are working with data collections. Right now `papermill` can generate an picture catalogue from a `JSON` file. 
+- [`punch`](https://github.com/laktek/punch) -- your friendly neighbourhood static website generator. Actually, it can be used for any kind of text files (just like `mustache`). This can be used to even generate your Mardown if you are working with data collections. Right now `papermill` can generate an picture catalogue from a `JSON` file. 
 
 #### Website Output  
 - [`html5boilerplate`](http://html5boilerplate.com) -- *nomen est omen*
@@ -100,6 +100,9 @@ Beta Testers so far:
 
 - [Naomi T. Salmon](http://nts.is) (for her doctoral thesis)
 - Bastian Bügler
+
+
+
 
 --- --- --- 
 
