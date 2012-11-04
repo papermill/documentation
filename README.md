@@ -1,4 +1,4 @@
-> Warning: This is a work in progress.  If you're still interested, get in touch and I'll tell you about the state of the project.
+> :warning: This is a work in progress.  If you're still interested, get in touch and I'll tell you about the state of the project. :warning: 
 
 
 ---
@@ -21,7 +21,7 @@ Instead of a *framework*, `papermill` rather tries to be an opinionated collecti
 
 ## Workflow
 
-> :warning: For now you have to figure out most of the stuff yourself. I will write this as I go along.
+> :warning: For now you have to figure out most of the stuff yourself. I will write this as I go along. :warning:
 
 1. Get the `Makefile`.  
    `curl foo/Makefile` (not implemented)
