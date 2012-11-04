@@ -21,7 +21,7 @@ Instead of a *framework*, `papermill` rather tries to be an opinionated collecti
 
 ## Workflow
 
-> :warning: For now you have to figure out most of the stuff yourself. I will write this as I go along.
+> :WARNING: For now you have to figure out most of the stuff yourself. I will write this as I go along.
 
 1. Get the `Makefile`.  
    `curl foo/Makefile` (not implemented)
