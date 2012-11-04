@@ -91,12 +91,12 @@ Right now, the status is alpha quality: It produces output for simple texts, but
 1. **better workflow** (also as web app)
 1. **better collaboration** by integrating even more with `git`
 
-## Beta Testers
+## Alpha Testers
 
-Beta Testers (authors, writers) are needed to not loose touch with reality.
+Alpha Testers (authors, writers) are needed to not loose touch with reality.
 If you found this by accident, chances are you are a valuable candidate -- please get [in touch](http://twitter.com/eins78).
 
-Beta Testers so far:
+Alpha Testers so far:
 
 - [Naomi T. Salmon](http://nts.is) (for her doctoral thesis)
 - Bastian Bügler
