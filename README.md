@@ -12,38 +12,36 @@ papermill.
 
 ![p](http://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Forest_Fibre_Company_Berlin%2C_New_Hampshire.JPG/220px-Forest_Fibre_Company_Berlin%2C_New_Hampshire.JPG)
 
-`papermill` is a toolchain for cross-publishing long form text to different media. The text can be something like an academic paper, an essay like static websites, an Ebook or a printable PDF.
+**`papermill` is a toolchain for cross-publishing long form text** to different media. The text can be something like an academic paper, an essay like static websites, an Ebook or a printable PDF.
 
-It aims to provide the best possible output, with minimal configuration and manual work. Just 'drop in' your Markdown formatted text file and you'll instantly get a static website and a printable PDF (via LaTeX).
+It aims to provide the best possible output, with minimal manual labor and configuration. Just 'drop in' your Markdown formatted text file and you'll instantly get a static website and a printable PDF (via `LaTeX`).
 
-Instead of a framework, `papermill` rather tries to be an opinionated collection of the best tools, standards and practices currently in use, combined with simple scripting to glue it together.
+Instead of a *framework*, `papermill` rather tries to be an opinionated collection of the best tools, standards and practices currently in use, combined with simple scripting to glue it together.
 
 
 ## Workflow
 
-> For now you have to figure out most of the stuff yourself. I will write this as I go along.
+> :warning: For now you have to figure out most of the stuff yourself. I will write this as I go along.
 
 1. Get the `Makefile`.  
-   `curl foo/Makefile`
+   `curl foo/Makefile` (not implemented)
 
-2. Check dependencies
-
-You need:
-
--
-
+2. Check dependencies (see under [Tools](#Tools))
 
 3. Setup your Document  
-   `make plain`
+   `make plain` (not implemented)
 
 4. Drop in your Markdown-formatted text.
    `open paper.markdown`
 
-5. `make web`
+5. `make html`
+
+6. `make pdf`
 
 
 ## Goals   
-* modularity -- 
+
+* modularity -- use all the scripts and get stuff done *or* implement part of the chain by using different tools.
 
 * distinguish between client and server, but work local anyway
 
@@ -52,36 +50,66 @@ You need:
 
 ## Tools
 
-#### Text Input
+![high-level overview](https://github.com/papermill/papermill/raw/master/documentation/papermill.sketch-arch1%402x.png)
+
+### Text Input
 - `Git` -- version control <del>voodoo</del> software. Takes care of your files and their history -- it's a neverending palimpset! Plus it provides ways to collaborate with editors and sync with remote servers. It also has hooks which we can use for automation.
 - [`Markdown`](http://daringfireball.net/projects/markdown/) -- plain text formating that goes out of your way, by [John Gruber](http://daringfireball.net). 
-- `MultiMarkdown` -- Markdown is for web writers, but papermill is for everyone. MultiMarkdown provides extensions we need with a consistent syntax:Citations, Footnotes and Bibliography.
-- [`mustache`](http://mustache.github.com) -- logic-less templates for (almost) everything.
-- `BibTex` -- commonly used with LaTeX, stores your bibliography info in a (plain text) database.
+- `pandoc`  -- Markdown is for web writers, but papermill is for everyone. `pandoc` provides extensions we need with a consistent syntax:Citations, Footnotes and Bibliography.
+- [`mustache`](http://mustache.github.com) -- logic-less templates for (almost) everything. Also its successor [`handlebars`](http://handlebarsjs.com).
+- [`BibTex`](http://www.bibtex.org) -- commonly used with LaTeX, stores your bibliography info in a (plain text) database.
 
-#### Output Generation
+### Output Generation
 - `make` -- a good old friend from `*NIX` which, according to it's [manpage](http://man.cx/make) "shall update files that are derived from other files", which is precisely what we are doing here.
 
-- `punch` -- your friendly neighbourhood static website generator. Actually, it can be used for any kind of text files (just like mustache). This is the most recent piece of the puzzle and it's awesomeness is what got `papermill` finally started.
+- `punch` -- your friendly neighbourhood static website generator. Actually, it can be used for any kind of text files (just like `mustache`). This can be used to even generate your Mardown if you are working with data collections. Right now `papermill` can generate an picture catalogue from a `JSON` file. 
 
-##### Website Output  
+#### Website Output  
 - [`html5boilerplate`](http://html5boilerplate.com) -- *nomen est omen*
 - [`bootstrap`](http://twitter.github.com/bootstrap/) web framework -- `HTML`, `CSS` and `javascript` components. A great base to start your own layout, but it also looks great right out of the box.
 - [`pandoc-bootstrap`](http://papermill.github.com/pandoc-bootstrap/)
 - [Readabilty: Article Publishing Guidelines](http://www.readability.com/publishers/guidelines/#reader) -- good summary of the [hNews microformat specification](http://microformats.org/wiki/hnews) and [Mark Pilgrim's Dive into HTML5](http://diveintohtml5.ep.io/semantics.html#new-elements).
 
-##### Print Output
-- [`LaTeX`](#) -- it's huge. 
+#### Print Output
+
+Is taken care of by `pandoc` by converting the text to [`LaTeX`](#), providing a PDF output suitable for print and the ability to use costum `LaTeX` templates.
+
+Literal `LaTeX` code can be used in the text and will only affect print output. This can be used to insert a `\pagebreak[4]` where a page break is wanted in the print output. 
+
+The downside is that (right now) there is no way to add certain other codes like the `LaTex` logo itself (i.g. `\LaTeX`) while providing a fallback for the web output. This is one of the problems this projec wants to solve. Still, it should not be an huge issue in an academic context (where a lot of literal `LaTex` might be needed). Here the PDF output is needed as a final version and the web output serves as a preview since most papers can't be published online before they are turned in, graded, etc.
+
+#### E-Book Output
+
+Is also taken care of by `pandoc`, which has support for a wide range of output formats in general. 
+
+Right now, the status is alpha quality: It produces output for simple texts, but some stuff breaks which shouldn't. Output to `ePub` is usable at least for proof reading on eBook devices.
+
+
+## Roadmap
+
+1. **better web output** -- think "book as web application". This is currently done in [pandoc-bootstrap](https://github.com/papermill/pandoc-bootstrap).
+1. **better workflow** (also as web app)
+1. **better collaboration** by integrating even more with `git`
+
+## Beta Testers
+
+Beta Testers (authors, writers) are needed to not loose touch with reality.
+If you found this by accident, chances are you are a valuable candidate -- please get [in touch](http://twitter.com/eins78).
+
+Beta Testers so far:
+
+- [Naomi T. Salmon](http://nts.is) (for her doctoral thesis)
+- Bastian Bügler
 
 --- --- --- 
 
-> List of possible names for this project:   
-[papermill](https://upload.wikimedia.org/wikipedia/commons/1/19/Forest_Fibre_Company_Berlin%2C_New_Hampshire.JPG). paperfront. paperboy. papermache. papermachine. papeterie. Passepartout. [Samizdat](https://en.wikipedia.org/wiki/Samizdat).
+> List of considered names for this project:   
+[papermill](https://upload.wikimedia.org/wikipedia/commons/1/19/Forest_Fibre_Company_Berlin%2C_New_Hampshire.JPG). paperfront. paperboy. papermache. papermachine. papeterie. Passepartout. tangeable.  
+Impact -- Impackd -- Imprint.  
+formatters -- form&matter -- form matters.  
+Publish or perish -- P.O.P. -- PopUp.  
+[Samizdat](https://en.wikipedia.org/wiki/Samizdat).
 
 
 > List of possibly further inspiring Words or Wikipedia Articles:  
     [Vanity](https://en.wikipedia.org/wiki/Vanity). 
-    tangeable. 
-		Publish or perish -- P.O.P. -- PopUp. 
-		Impact -- Impackd -- Imprint. 
-		formatters -- form&matter -- form matters
