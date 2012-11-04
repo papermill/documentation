@@ -50,7 +50,7 @@ Instead of a *framework*, `papermill` rather tries to be an opinionated collecti
 
 ## Tools
 
-![high-level overview](https://github.com/papermill/papermill/raw/master/documentation/papermill.sketch-arch1%402x.png)
+![high-level overview](https://github.com/papermill/documentation/raw/master/images/papermill.sketch-arch1%402x.png)
 
 ### Text Input
 - [`Git`](http://git-scm.com) -- version control <del>voodoo</del> software. Takes care of your files and their history -- it's a neverending palimpset! Plus it provides ways to collaborate with editors and sync with remote servers. It also has hooks which we can use for automation.
