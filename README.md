@@ -1,5 +1,4 @@
-> Warning: This is a work in progress. If you stumple upon this, don't get lulled in by this text: It's basicly a TODO list in prose.  
-If you're still interested, get in touch and I'll tell you about the state of the project.
+> Warning: This is a work in progress.  If you're still interested, get in touch and I'll tell you about the state of the project.
 
 
 ---
@@ -22,14 +21,17 @@ Instead of a framework, `papermill` rather tries to be an opinionated collection
 
 ## Workflow
 
-> For now you need to handle git yourself.
+> For now you have to figure out most of the stuff yourself. I will write this as I go along.
 
 1. Get the `Makefile`.  
    `curl foo/Makefile`
 
 2. Check dependencies
-   `make check`  
-   Install missing software according to your operating system.
+
+You need:
+
+-
+
 
 3. Setup your Document  
    `make plain`
@@ -64,7 +66,8 @@ Instead of a framework, `papermill` rather tries to be an opinionated collection
 
 ##### Website Output  
 - [`html5boilerplate`](http://html5boilerplate.com) -- *nomen est omen*
-- [`bootstrap`](http://twitter.github.com/bootstrap/) from twitter -- `HTML`, `CSS` and `javascript` components. A great base to start your own layout, but it also looks great right out of the box.
+- [`bootstrap`](http://twitter.github.com/bootstrap/) web framework -- `HTML`, `CSS` and `javascript` components. A great base to start your own layout, but it also looks great right out of the box.
+- [`pandoc-bootstrap`](http://papermill.github.com/pandoc-bootstrap/)
 - [Readabilty: Article Publishing Guidelines](http://www.readability.com/publishers/guidelines/#reader) -- good summary of the [hNews microformat specification](http://microformats.org/wiki/hnews) and [Mark Pilgrim's Dive into HTML5](http://diveintohtml5.ep.io/semantics.html#new-elements).
 
 ##### Print Output
