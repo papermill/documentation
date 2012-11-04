@@ -11,9 +11,7 @@ papermill.
 
 > *write once, publish everywhere*
 
-----------------------------------
-
-![](../../../Downloads/220px-Forest_Fibre_Company_Berlin,_New_Hampshire.JPG)
+![p](http://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Forest_Fibre_Company_Berlin%2C_New_Hampshire.JPG/220px-Forest_Fibre_Company_Berlin%2C_New_Hampshire.JPG)
 
 `papermill` is a toolchain for cross-publishing long form text to different media. The text can be something like an academic paper, an essay like static websites, an Ebook or a printable PDF.
 
