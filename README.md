@@ -29,12 +29,17 @@ Instead of a *framework*, `papermill` rather tries to be an opinionated collecti
 
 3. Start a new Paper with the Name "Testing"
 
+    `````
     mill new Testing
+    `````
 
 4. Confirm Output
 
+    `````
+    cd Testing
     mill web
     mill print
+    `````
 
 
 ## Goals   
