@@ -23,20 +23,23 @@ Instead of a *framework*, `papermill` rather tries to be an opinionated collecti
 
 > :warning: For now you have to figure out most of the stuff yourself. I will write this as I go along. :warning:
 
-1. Get the `Makefile`.  
-   `curl foo/Makefile` (not implemented)
+1. Install the CLI tool [`mill`](https://github.com/papermill/mill).
 
-2. Check dependencies (see under [Tools](#Tools))
+2. Install dependencies (`pandoc` and `LaTeX`)
 
-3. Setup your Document  
-   `make plain` (not implemented)
+3. Start a new Paper with the Name "Testing"
 
-4. Drop in your Markdown-formatted text.
-   `open paper.markdown`
+    `````
+    mill new Testing
+    `````
 
-5. `make html`
+4. Confirm Output
 
-6. `make pdf`
+    `````
+    cd Testing
+    mill web
+    mill print
+    `````
 
 
 ## Goals   
