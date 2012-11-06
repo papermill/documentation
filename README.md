@@ -119,11 +119,8 @@ markup](http://www.mediawiki.org/wiki/Help:Formatting)
 > - [Textile](http://redcloth.org/textile)
 > - [groff man](http://developer.apple.com/DOCUMENTATION/Darwin/Reference/ManPages/man7/groff_man.7.html) pages
 > - [Emacs Org-Mode](http://orgmode.org)
-> - [AsciiDoc](http://www.methods.co.nz/asciidoc/) and
-> - [Slidy](http://www.w3.org/Talks/Tools/Slidy/)
-> - [Slideous](http://goessner.net/articles/slideous/)
-> - [DZSlides](http://paulrouget.com/dzslides/) or
-> -  or [S5](http://meyerweb.com/eric/tools/s5/) HTML slide shows. 
+> - [AsciiDoc](http://www.methods.co.nz/asciidoc/)
+> and [Slidy](http://www.w3.org/Talks/Tools/Slidy/), [Slideous](http://goessner.net/articles/slideous/), [DZSlides](http://paulrouget.com/dzslides/) or [S5](http://meyerweb.com/eric/tools/s5/) HTML slide shows. 
 > 
 > It can also produce [PDF](http://www.adobe.com/pdf/) output on systems where LaTeX is installed.
 
