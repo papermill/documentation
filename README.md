@@ -23,23 +23,28 @@ Instead of a *framework*, `papermill` rather tries to be an opinionated collecti
 
 > :warning: For now you have to figure out most of the stuff yourself. I will write this as I go along. :warning:
 
-1. Install the CLI tool [`mill`](https://github.com/papermill/mill).
+1. Install the CLI tool [`mill`](https://github.com/papermill/mill) and dependencies according to instructions.
 
-2. Install dependencies (`pandoc` and `LaTeX`)
-
-3. Start a new Paper with the Name "Testing"
+2. Start a new Paper with the Name "Testing"
 
     `````
     mill new Testing
-    `````
-
-4. Confirm Output
-
-    `````
     cd Testing
+    `````
+
+3. Write Text
+
+4. Generate Output
+
+    `````
     mill web
     mill print
     `````
+5. [git commit](http://git-scm.com/docs/git-commit)
+
+5. Optional: 
+   - Automate Output Generation with git hooks (generate HTML after every commit)
+   - Automate git commiting ([`flashbake`](https://github.com/commandline/flashbake), [`git-o-mat`](https://github.com/eins78/git-o-mat))
 
 
 ## Goals   
@@ -51,7 +56,7 @@ Instead of a *framework*, `papermill` rather tries to be an opinionated collecti
 * no dependencies other than core tools and POSIX: a project like this has a shitload of dependencies anyway. I don't want to make it worse by adding even more -- what comes with any UNIX and Linux is plentifull.
 
 
-## Tools
+## Architecture Overview: Components & Tools
 
 ![high-level overview](https://github.com/papermill/documentation/raw/master/images/papermill.sketch-arch1%402x.png)
 
@@ -86,6 +91,41 @@ The downside is that (right now) there is no way to add certain other codes like
 Is also taken care of by `pandoc`, which has support for a wide range of output formats in general. 
 
 Right now, the status is alpha quality: It produces output for simple texts, but some stuff breaks which shouldn't. Output to `ePub` is usable at least for proof reading on eBook devices.
+
+#### Other Output
+
+`pandoc` support a wide range of other output formats with different levels of quality. Especially the output to RTF and other Rich-Text formats should be interesting for authors which need to turn in files compatible with "Word".
+
+Here ist the full list from the [`pandoc` documentation](http://johnmacfarlane.net/pandoc/README.html):
+
+> it can write 
+>
+> - plain text
+> - [markdown](http://daringfireball.net/projects/markdown/)
+> - [reStructuredText](http://docutils.sourceforge.net/docs/ref/rst/introduction.html)
+> - [XHTML](http://www.w3.org/TR/xhtml1/), [HTML5](http://www.w3.org/TR/html5/)
+> - [LaTeX](http://www.latex-project.org/) (including [beamer](http://www.tex.ac.uk/CTAN/macros/latex/contrib/beamer) slide shows), [ConTeXt](http://www.pragma-ade.nl/)
+> - [RTF](http://en.wikipedia.org/wiki/Rich_Text_Format)
+> - [DocBook XML](http://www.docbook.org/)
+> - [OpenDocument
+XML](http://opendocument.xml.org/)
+> - [ODT](http://en.wikipedia.org/wiki/OpenDocument)
+> - [Word
+docx](http://www.microsoft.com/interop/openup/openxml/default.aspx)
+> - [GNU Texinfo](http://www.gnu.org/software/texinfo/)
+> - [MediaWiki
+markup](http://www.mediawiki.org/wiki/Help:Formatting)
+> - [EPUB](http://www.idpf.org/)
+> - [Textile](http://redcloth.org/textile)
+> - [groff man](http://developer.apple.com/DOCUMENTATION/Darwin/Reference/ManPages/man7/groff_man.7.html) pages
+> - [Emacs Org-Mode](http://orgmode.org)
+> - [AsciiDoc](http://www.methods.co.nz/asciidoc/) and
+> - [Slidy](http://www.w3.org/Talks/Tools/Slidy/)
+> - [Slideous](http://goessner.net/articles/slideous/)
+> - [DZSlides](http://paulrouget.com/dzslides/) or
+> -  or [S5](http://meyerweb.com/eric/tools/s5/) HTML slide shows. 
+> 
+> It can also produce [PDF](http://www.adobe.com/pdf/) output on systems where LaTeX is installed.
 
 
 ## Roadmap
