@@ -1,4 +1,4 @@
-> :warning: This is a work in progress.  If you're still interested, get in touch and I'll tell you about the state of the project. :warning: 
+:warning: *This is a **work in progress**.  If you're still interested, get in touch and I'll tell you about the state of the project.* :warning: 
 
 
 ---
@@ -8,7 +8,7 @@
 papermill. 
 ==========
 
-> *write once, publish everywhere*
+*write once, publish everywhere*
 
 ![p](http://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Forest_Fibre_Company_Berlin%2C_New_Hampshire.JPG/220px-Forest_Fibre_Company_Berlin%2C_New_Hampshire.JPG)
 
@@ -21,7 +21,7 @@ Instead of a *framework*, `papermill` rather tries to be an opinionated collecti
 
 ## Workflow
 
-> :warning: For now you have to figure out most of the stuff yourself. I will write this as I go along. :warning:
+:warning: *For now you have to figure out most of the stuff yourself. I will write this as I go along.* :warning:
 
 1. Install the CLI tool [`mill`](https://github.com/papermill/mill) and dependencies according to instructions.
 
