@@ -42,6 +42,8 @@ This is a Picture:
 
 ## References
 
+**pandoc only**
+
 Sometime one wants to have notes. [^footnote-bla]
 
 [footnote-bla]: This is the text of the Footnote.
