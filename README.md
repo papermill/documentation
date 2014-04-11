@@ -80,7 +80,7 @@ Instead of a *framework*, `papermill` rather tries to be an opinionated collecti
 
 #### Print Output
 
-Is taken care of by `pandoc` by converting the text to [`LaTeX`](#), providing a PDF output suitable for print and the ability to use costum `LaTeX` templates.
+Is taken care of by `pandoc` by converting the text to [`LaTeX`](#), providing a PDF output suitable for print and the ability to use custom `LaTeX` templates.
 
 Literal `LaTeX` code can be used in the text and will only affect print output. This can be used to insert a `\pagebreak[4]` where a page break is wanted in the print output. 
 
